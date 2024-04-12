@@ -1,0 +1,437 @@
+@font-face {
+    font-family: reg;
+    src: url(./fonts/OldschoolGrotesk_W-Regular.ttf);
+}
+@font-face {
+    font-family: light;
+    src: url(./fonts/OldschoolGrotesk_W-Light.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: reg;
+    background-color: #FEF3E1;
+}
+
+
+#page1{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#page1 #elems{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.1s;
+}
+
+#page1 #elems h1{
+    font-size: 8vw;
+    line-height: 8vw;
+    font-weight: 500;
+}
+
+#page1 #elems #bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6vw;
+    position: relative;
+}
+
+#page1 svg{
+    width: 40vw;
+    position: absolute;
+}
+
+#elems #bottom h4{
+    font-family: light;
+    font-weight: 100;
+    font-size: 1.5vw;
+    letter-spacing: 8px;
+}
+
+#page1 #scroll-down-arrow{
+    position: fixed;
+    bottom: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+/* #scroll-down-arrow i{
+    font-size: 15vw;
+} */
+
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5vw;
+    transition: all ease 0.1s;
+}
+
+#page2-top{
+    text-align: center;
+}
+
+#page h4{
+    font-size: 1vw;
+    letter-spacing: 4px;
+}
+
+#page2 h1{
+    font-family: light;
+    font-weight: 600;
+    font-size: 18vw;
+    color: #D3CABB;
+}
+
+#page2-img{
+    width: 100%;
+    position: absolute;
+    bottom: -100%;
+    overflow: hidden;
+    transition: all ease 0.1s;
+    scale: 1;
+    overflow: hidden;
+    z-index: 9;
+}
+
+#page2-img img{
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    transition: all ease 0.1s;
+}
+
+#page3{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    margin-bottom: 90vw;
+}
+#page3-img{
+    position: absolute;
+    z-index: 8;
+    transition: all ease 0.1s;
+}
+
+#page3-img img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all ease 0.1s;
+}
+
+#page3-dets{
+    width: 95vw;
+    height: 140%;
+    min-height: 100vh;
+    position: absolute;
+    background-color: #C8BFAD;
+    z-index: 10;
+    bottom: -170%;
+    margin-left: 2.5vw;
+    transition: all ease 0.1s;
+}
+
+#page3-head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    padding-top: 7vw;
+    margin-bottom: 4vw;
+}
+
+#page3-head h3{
+    color: #787166;
+    font-family: light;
+    font-size: 1.2vw;
+    letter-spacing: 5px;
+}
+
+#page3-head p{
+    color: #787166;
+    font-family: reg;
+    font-weight: 500;
+    font-size: 1.15vw;
+    line-height: 1.4;
+    text-align: center;
+}
+
+#page3-center{
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    border-bottom: 1px solid #736D62;
+    margin: 0 20%;
+    position: relative;
+    margin-bottom: 5vw;
+}
+
+#dot{
+    height: 10px;
+    width: 10px;
+    background-color: #736D62;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -8%;
+    left: 26.5%;
+}
+
+#page3-center h1{
+    font-family: light;
+    color: #736D62;
+    font-size: 2.5vw;
+    cursor: pointer;
+}
+
+#page3-center h1:nth-child(3){
+    opacity: 50%;
+    transition: all ease 0.4s;
+}
+#page3-center h1:nth-child(5){
+    opacity: 50%;
+    transition: all ease 0.4s;
+}
+
+#page3-center .line{
+    font-family: light;
+    font-weight: 100;
+    font-size: 4vw;
+}
+
+#page3-center h1:nth-child(3):hover{
+    cursor: pointer;
+    opacity: 70%;
+}
+
+#page3-center h1:nth-child(5):hover{
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.page3-about{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw;
+    margin-bottom: 6vw;
+    cursor: pointer;
+}
+
+.page3-about #blanco{
+    position: absolute;
+    z-index: 9;
+    top: 10%;
+}
+
+.page3-about #reposado{
+    position: absolute;
+    top: 10%;
+    z-index: 8;
+    opacity: 0;
+
+}
+
+.page3-about #anejo{
+    position: absolute;
+    top: 10%;
+    z-index: 7;
+    opacity: 0;
+}
+
+.page3-about img{
+    position: absolute;
+    left: 9%;
+    top: -6%;
+    width: 36vw;
+}
+
+.about-text{
+    margin-left: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-text h1{
+    color: #736D62;
+    font-family: reg;
+    font-size: 6vw;
+}
+
+.about-text p{
+    color: #888175;
+    font-family: reg;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+#abt-points{
+    margin-top: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+}
+
+#abt-points h3{
+    color: #736D62;
+    font-family: reg;
+    font-size: 1.1vw;
+    letter-spacing: 4px;
+}
+
+#abt-points p{
+    color: #888175;
+    font-family: reg;
+    font-weight: 500;
+}
+
+.about-text a{
+    width: 17vw;
+    margin: 2vw 0;
+    text-decoration: none;
+    font-family: reg;
+    font-weight: 600;
+    text-align: center;
+    color: #736D62;
+    border: 1px solid #0000006c;
+    padding: .75vw 3vw;
+    font-size: .79vw;
+    letter-spacing: 4px;
+    position: relative;
+    overflow: hidden;
+    z-index: 9;
+}
+
+/* .about-text a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #736D62;
+    transition: all ease 0.4s;
+    z-index: 1;
+}
+
+.about-text a:hover::after{
+    bottom: 0;
+}
+
+.about-text a:hover{
+    color: #fff;
+} Adjust the code according to what you want, I skipped this part!!!*/
+
+#page4{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+#page4-head{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3.5vw;
+    transition: all ease 0.4s;
+}
+
+#page4-head h1{
+    font-family: reg;
+    font-size: 5.5vw;
+}
+
+#page4-head p{
+    font-family: reg;
+    font-weight: 500;
+    font-size: 1.1vw;
+    line-height: 1.4;
+    color: #3F3E3C;
+}
+
+#page4-media{
+    position: relative;
+    width: 100%;
+    padding: 0 2vw;
+    display: flex;
+}
+
+#media-left{
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1vw;
+    position: absolute;
+    top: 3.5vw;
+}
+
+#video{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#image{
+    width: 55%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#media-center{
+    width: 47%;
+    height: 580px;
+    position: absolute;
+    left: 24.75%;
+}
+
+#media-center img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all ease 0.4s;
+}
+
+#media-right{
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vw;
+    position: absolute;
+    top: 3.5vw;
+    left: 72.5%;
+}
